@@ -87,8 +87,11 @@ class NoteRoot extends React.Component {
   render() {
     const { annotation, renderContents, isEditing, closeEditing, searchInput, contents } = this.props;
 
+    console.log( 'annotation: ',annotation );
+
     return(
-      <div className="NoteRoot">
+      <div className="NoteRoot" data-note-id={ annotation.DD }>
+        {/* <p>{ JSON.stringify(annotation) }</p> */}
         {this.renderHeader()}
         <NoteContents 
           annotation={annotation} 
